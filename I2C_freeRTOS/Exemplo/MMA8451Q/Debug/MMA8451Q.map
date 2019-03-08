@@ -441,6 +441,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x3d ./source/MMA8451Q.o
  .debug_macro   0x0000000000000000       0x16 ./source/MMA8451Q.o
  .debug_macro   0x0000000000000000       0x34 ./source/MMA8451Q.o
+ .debug_macro   0x0000000000000000       0xbe ./source/MMA8451Q.o
  .group         0x0000000000000000        0xc ./source/mtb.o
  .group         0x0000000000000000        0xc ./source/mtb.o
  .group         0x0000000000000000        0xc ./source/mtb.o
@@ -4262,13 +4263,13 @@ END GROUP
                 0x0000000000000498       0xf4 ./utilities/fsl_debug_console.o
                 0x0000000000000498                DbgConsole_Init
  .text          0x000000000000058c      0x24c ./source/Accelerometer.o
-                0x000000000000058c                Accelerometer::Accelerometer(mma8451q_frequency_t, mma8451q_range_t, mma8451q_power_t)
-                0x000000000000058c                Accelerometer::Accelerometer(mma8451q_frequency_t, mma8451q_range_t, mma8451q_power_t)
-                0x0000000000000618                Accelerometer::setFilter()
-                0x0000000000000656                Accelerometer::getX()
-                0x000000000000068c                Accelerometer::getY()
-                0x00000000000006c2                Accelerometer::getZ()
-                0x00000000000006f8                Accelerometer::calibrate()
+                0x000000000000058c                MMA8451Q::MMA8451Q(mma8451q_frequency_t, mma8451q_range_t, mma8451q_power_t)
+                0x000000000000058c                MMA8451Q::MMA8451Q(mma8451q_frequency_t, mma8451q_range_t, mma8451q_power_t)
+                0x0000000000000618                MMA8451Q::setFilter()
+                0x0000000000000656                MMA8451Q::getX()
+                0x000000000000068c                MMA8451Q::getY()
+                0x00000000000006c2                MMA8451Q::getZ()
+                0x00000000000006f8                MMA8451Q::calibrate()
  .text          0x00000000000007d8      0x40c ./source/I2C.o
                 0x00000000000007d8                I2C::I2C(I2C_Type*, unsigned char, mult_value_t, icr_value_t)
                 0x00000000000007d8                I2C::I2C(I2C_Type*, unsigned char, mult_value_t, icr_value_t)
@@ -5371,7 +5372,7 @@ OUTPUT(MMA8451Q.axf elf32-littlearm)
  .debug_ranges  0x0000000000000cc0       0x28 ./board/pin_mux.o
  .debug_ranges  0x0000000000000ce8       0x18 ./CMSIS/system_MKL25Z4.o
 
-.debug_macro    0x0000000000000000     0xea53
+.debug_macro    0x0000000000000000     0xe995
  .debug_macro   0x0000000000000000      0x2d7 ./utilities/fsl_debug_console.o
  .debug_macro   0x00000000000002d7      0x8da ./utilities/fsl_debug_console.o
  .debug_macro   0x0000000000000bb1       0x58 ./utilities/fsl_debug_console.o
@@ -5429,23 +5430,23 @@ OUTPUT(MMA8451Q.axf elf32-littlearm)
  .debug_macro   0x00000000000089d2       0x10 ./utilities/fsl_debug_console.o
  .debug_macro   0x00000000000089e2       0x2a ./startup/startup_mkl25z4.o
  .debug_macro   0x0000000000008a0c      0x9c4 ./startup/startup_mkl25z4.o
- .debug_macro   0x00000000000093d0      0x1eb ./source/Accelerometer.o
- .debug_macro   0x00000000000095bb      0xb6e ./source/Accelerometer.o
- .debug_macro   0x000000000000a129       0x58 ./source/Accelerometer.o
- .debug_macro   0x000000000000a181       0x18 ./source/Accelerometer.o
- .debug_macro   0x000000000000a199       0x34 ./source/Accelerometer.o
- .debug_macro   0x000000000000a1cd       0x16 ./source/Accelerometer.o
- .debug_macro   0x000000000000a1e3       0x16 ./source/Accelerometer.o
- .debug_macro   0x000000000000a1f9       0x1c ./source/Accelerometer.o
- .debug_macro   0x000000000000a215      0x17b ./source/Accelerometer.o
- .debug_macro   0x000000000000a390       0x58 ./source/Accelerometer.o
- .debug_macro   0x000000000000a3e8       0x43 ./source/Accelerometer.o
- .debug_macro   0x000000000000a42b      0x353 ./source/Accelerometer.o
- .debug_macro   0x000000000000a77e       0x10 ./source/Accelerometer.o
- .debug_macro   0x000000000000a78e       0x35 ./source/Accelerometer.o
- .debug_macro   0x000000000000a7c3      0x329 ./source/Accelerometer.o
- .debug_macro   0x000000000000aaec       0x10 ./source/Accelerometer.o
- .debug_macro   0x000000000000aafc       0xb8 ./source/Accelerometer.o
+ .debug_macro   0x00000000000093d0      0x1e5 ./source/Accelerometer.o
+ .debug_macro   0x00000000000095b5      0xb6e ./source/Accelerometer.o
+ .debug_macro   0x000000000000a123       0x58 ./source/Accelerometer.o
+ .debug_macro   0x000000000000a17b       0x18 ./source/Accelerometer.o
+ .debug_macro   0x000000000000a193       0x34 ./source/Accelerometer.o
+ .debug_macro   0x000000000000a1c7       0x16 ./source/Accelerometer.o
+ .debug_macro   0x000000000000a1dd       0x16 ./source/Accelerometer.o
+ .debug_macro   0x000000000000a1f3       0x1c ./source/Accelerometer.o
+ .debug_macro   0x000000000000a20f      0x17b ./source/Accelerometer.o
+ .debug_macro   0x000000000000a38a       0x58 ./source/Accelerometer.o
+ .debug_macro   0x000000000000a3e2       0x43 ./source/Accelerometer.o
+ .debug_macro   0x000000000000a425      0x353 ./source/Accelerometer.o
+ .debug_macro   0x000000000000a778       0x10 ./source/Accelerometer.o
+ .debug_macro   0x000000000000a788       0x35 ./source/Accelerometer.o
+ .debug_macro   0x000000000000a7bd      0x329 ./source/Accelerometer.o
+ .debug_macro   0x000000000000aae6       0x10 ./source/Accelerometer.o
+ .debug_macro   0x000000000000aaf6       0xbe ./source/Accelerometer.o
  .debug_macro   0x000000000000abb4       0xbe ./source/GPIO.o
  .debug_macro   0x000000000000ac72       0x8e ./source/GPIO.o
  .debug_macro   0x000000000000ad00       0x51 ./source/GPIO.o
@@ -5469,110 +5470,109 @@ OUTPUT(MMA8451Q.axf elf32-littlearm)
  .debug_macro   0x000000000000bdb9       0x78 ./source/MMA8451Q.o
  .debug_macro   0x000000000000be31       0xc0 ./source/MMA8451Q.o
  .debug_macro   0x000000000000bef1       0x8c ./source/MMA8451Q.o
- .debug_macro   0x000000000000bf7d       0xbe ./source/MMA8451Q.o
- .debug_macro   0x000000000000c03b       0x2f ./source/mtb.o
- .debug_macro   0x000000000000c06a      0xa7e ./source/mtb.o
- .debug_macro   0x000000000000cae8       0x82 ./source/mtb.o
- .debug_macro   0x000000000000cb6a       0x10 ./source/mtb.o
- .debug_macro   0x000000000000cb7a       0xda ./freertos/fsl_tickless_lptmr.o
- .debug_macro   0x000000000000cc54       0x8e ./freertos/fsl_tickless_lptmr.o
- .debug_macro   0x000000000000cce2      0x1a2 ./freertos/heap_4.o
- .debug_macro   0x000000000000ce84      0x17b ./freertos/list.o
- .debug_macro   0x000000000000cfff       0xec ./freertos/port.o
- .debug_macro   0x000000000000d0eb      0x201 ./freertos/queue.o
- .debug_macro   0x000000000000d2ec      0x261 ./freertos/tasks.o
- .debug_macro   0x000000000000d54d       0x11 ./freertos/tasks.o
- .debug_macro   0x000000000000d55e      0x1ae ./freertos/timers.o
- .debug_macro   0x000000000000d70c      0x26a ./drivers/fsl_clock.o
- .debug_macro   0x000000000000d976      0x288 ./drivers/fsl_common.o
- .debug_macro   0x000000000000dbfe      0x1c0 ./drivers/fsl_dma.o
- .debug_macro   0x000000000000ddbe      0x1bf ./drivers/fsl_i2c.o
- .debug_macro   0x000000000000df7d      0x1c0 ./drivers/fsl_lpsci.o
- .debug_macro   0x000000000000e13d      0x1c6 ./drivers/fsl_uart.o
- .debug_macro   0x000000000000e303      0x2b1 ./board/board.o
- .debug_macro   0x000000000000e5b4      0x1f7 ./board/clock_config.o
- .debug_macro   0x000000000000e7ab       0x1b ./board/peripherals.o
- .debug_macro   0x000000000000e7c6      0x1c2 ./board/pin_mux.o
- .debug_macro   0x000000000000e988       0x10 ./board/pin_mux.o
- .debug_macro   0x000000000000e998       0xbb ./CMSIS/system_MKL25Z4.o
+ .debug_macro   0x000000000000bf7d       0x2f ./source/mtb.o
+ .debug_macro   0x000000000000bfac      0xa7e ./source/mtb.o
+ .debug_macro   0x000000000000ca2a       0x82 ./source/mtb.o
+ .debug_macro   0x000000000000caac       0x10 ./source/mtb.o
+ .debug_macro   0x000000000000cabc       0xda ./freertos/fsl_tickless_lptmr.o
+ .debug_macro   0x000000000000cb96       0x8e ./freertos/fsl_tickless_lptmr.o
+ .debug_macro   0x000000000000cc24      0x1a2 ./freertos/heap_4.o
+ .debug_macro   0x000000000000cdc6      0x17b ./freertos/list.o
+ .debug_macro   0x000000000000cf41       0xec ./freertos/port.o
+ .debug_macro   0x000000000000d02d      0x201 ./freertos/queue.o
+ .debug_macro   0x000000000000d22e      0x261 ./freertos/tasks.o
+ .debug_macro   0x000000000000d48f       0x11 ./freertos/tasks.o
+ .debug_macro   0x000000000000d4a0      0x1ae ./freertos/timers.o
+ .debug_macro   0x000000000000d64e      0x26a ./drivers/fsl_clock.o
+ .debug_macro   0x000000000000d8b8      0x288 ./drivers/fsl_common.o
+ .debug_macro   0x000000000000db40      0x1c0 ./drivers/fsl_dma.o
+ .debug_macro   0x000000000000dd00      0x1bf ./drivers/fsl_i2c.o
+ .debug_macro   0x000000000000debf      0x1c0 ./drivers/fsl_lpsci.o
+ .debug_macro   0x000000000000e07f      0x1c6 ./drivers/fsl_uart.o
+ .debug_macro   0x000000000000e245      0x2b1 ./board/board.o
+ .debug_macro   0x000000000000e4f6      0x1f7 ./board/clock_config.o
+ .debug_macro   0x000000000000e6ed       0x1b ./board/peripherals.o
+ .debug_macro   0x000000000000e708      0x1c2 ./board/pin_mux.o
+ .debug_macro   0x000000000000e8ca       0x10 ./board/pin_mux.o
+ .debug_macro   0x000000000000e8da       0xbb ./CMSIS/system_MKL25Z4.o
 
-.debug_line     0x0000000000000000     0x96c7
+.debug_line     0x0000000000000000     0x96bd
  .debug_line    0x0000000000000000      0x45d ./utilities/fsl_debug_console.o
  .debug_line    0x000000000000045d      0x13a ./startup/startup_mkl25z4.o
- .debug_line    0x0000000000000597      0x4ad ./source/Accelerometer.o
- .debug_line    0x0000000000000a44      0x35b ./source/GPIO.o
- .debug_line    0x0000000000000d9f      0x4c1 ./source/I2C.o
- .debug_line    0x0000000000001260      0x6b3 ./source/MMA8451Q.o
- .debug_line    0x0000000000001913       0xda ./source/mtb.o
- .debug_line    0x00000000000019ed      0x38f ./freertos/fsl_tickless_lptmr.o
- .debug_line    0x0000000000001d7c      0x502 ./freertos/heap_4.o
- .debug_line    0x000000000000227e      0x458 ./freertos/list.o
- .debug_line    0x00000000000026d6      0x490 ./freertos/port.o
- .debug_line    0x0000000000002b66      0xa45 ./freertos/queue.o
- .debug_line    0x00000000000035ab      0xf47 ./freertos/tasks.o
- .debug_line    0x00000000000044f2      0x6de ./freertos/timers.o
- .debug_line    0x0000000000004bd0      0xbd1 ./drivers/fsl_clock.o
- .debug_line    0x00000000000057a1      0x598 ./drivers/fsl_common.o
- .debug_line    0x0000000000005d39      0x733 ./drivers/fsl_dma.o
- .debug_line    0x000000000000646c      0xc23 ./drivers/fsl_i2c.o
- .debug_line    0x000000000000708f      0x980 ./drivers/fsl_lpsci.o
- .debug_line    0x0000000000007a0f      0x983 ./drivers/fsl_uart.o
- .debug_line    0x0000000000008392      0x563 ./board/board.o
- .debug_line    0x00000000000088f5      0x511 ./board/clock_config.o
- .debug_line    0x0000000000008e06       0x58 ./board/peripherals.o
- .debug_line    0x0000000000008e5e      0x4b6 ./board/pin_mux.o
- .debug_line    0x0000000000009314      0x3b3 ./CMSIS/system_MKL25Z4.o
+ .debug_line    0x0000000000000597      0x4a8 ./source/Accelerometer.o
+ .debug_line    0x0000000000000a3f      0x35b ./source/GPIO.o
+ .debug_line    0x0000000000000d9a      0x4c1 ./source/I2C.o
+ .debug_line    0x000000000000125b      0x6ae ./source/MMA8451Q.o
+ .debug_line    0x0000000000001909       0xda ./source/mtb.o
+ .debug_line    0x00000000000019e3      0x38f ./freertos/fsl_tickless_lptmr.o
+ .debug_line    0x0000000000001d72      0x502 ./freertos/heap_4.o
+ .debug_line    0x0000000000002274      0x458 ./freertos/list.o
+ .debug_line    0x00000000000026cc      0x490 ./freertos/port.o
+ .debug_line    0x0000000000002b5c      0xa45 ./freertos/queue.o
+ .debug_line    0x00000000000035a1      0xf47 ./freertos/tasks.o
+ .debug_line    0x00000000000044e8      0x6de ./freertos/timers.o
+ .debug_line    0x0000000000004bc6      0xbd1 ./drivers/fsl_clock.o
+ .debug_line    0x0000000000005797      0x598 ./drivers/fsl_common.o
+ .debug_line    0x0000000000005d2f      0x733 ./drivers/fsl_dma.o
+ .debug_line    0x0000000000006462      0xc23 ./drivers/fsl_i2c.o
+ .debug_line    0x0000000000007085      0x980 ./drivers/fsl_lpsci.o
+ .debug_line    0x0000000000007a05      0x983 ./drivers/fsl_uart.o
+ .debug_line    0x0000000000008388      0x563 ./board/board.o
+ .debug_line    0x00000000000088eb      0x511 ./board/clock_config.o
+ .debug_line    0x0000000000008dfc       0x58 ./board/peripherals.o
+ .debug_line    0x0000000000008e54      0x4b6 ./board/pin_mux.o
+ .debug_line    0x000000000000930a      0x3b3 ./CMSIS/system_MKL25Z4.o
 
-.debug_str      0x0000000000000000    0x42fd1
+.debug_str      0x0000000000000000    0x42f9d
  .debug_str     0x0000000000000000    0x34411 ./utilities/fsl_debug_console.o
                                       0x348cd (size before relaxing)
  .debug_str     0x0000000000034411      0x904 ./startup/startup_mkl25z4.o
                                        0x2d31 (size before relaxing)
- .debug_str     0x0000000000034d15     0x165b ./source/Accelerometer.o
-                                      0x33892 (size before relaxing)
- .debug_str     0x0000000000036370       0xf4 ./source/GPIO.o
+ .debug_str     0x0000000000034d15     0x1627 ./source/Accelerometer.o
+                                      0x3385e (size before relaxing)
+ .debug_str     0x000000000003633c       0xf4 ./source/GPIO.o
                                       0x28a18 (size before relaxing)
- .debug_str     0x0000000000036464       0x53 ./source/I2C.o
+ .debug_str     0x0000000000036430       0x53 ./source/I2C.o
                                       0x333bd (size before relaxing)
- .debug_str     0x00000000000364b7     0x52e7 ./source/MMA8451Q.o
-                                      0x3a298 (size before relaxing)
- .debug_str     0x000000000003b79e      0x5ef ./source/mtb.o
+ .debug_str     0x0000000000036483     0x52e7 ./source/MMA8451Q.o
+                                      0x3a26a (size before relaxing)
+ .debug_str     0x000000000003b76a      0x5ef ./source/mtb.o
                                        0x3226 (size before relaxing)
- .debug_str     0x000000000003bd8d      0x43c ./freertos/fsl_tickless_lptmr.o
+ .debug_str     0x000000000003bd59      0x43c ./freertos/fsl_tickless_lptmr.o
                                        0x760a (size before relaxing)
- .debug_str     0x000000000003c1c9      0x27e ./freertos/heap_4.o
+ .debug_str     0x000000000003c195      0x27e ./freertos/heap_4.o
                                        0xa08f (size before relaxing)
- .debug_str     0x000000000003c447      0x12a ./freertos/list.o
+ .debug_str     0x000000000003c413      0x12a ./freertos/list.o
                                        0x99b2 (size before relaxing)
- .debug_str     0x000000000003c571      0x188 ./freertos/port.o
+ .debug_str     0x000000000003c53d      0x188 ./freertos/port.o
                                        0x77b1 (size before relaxing)
- .debug_str     0x000000000003c6f9      0x764 ./freertos/queue.o
+ .debug_str     0x000000000003c6c5      0x764 ./freertos/queue.o
                                        0xaf2c (size before relaxing)
- .debug_str     0x000000000003ce5d     0x1ab7 ./freertos/tasks.o
+ .debug_str     0x000000000003ce29     0x1ab7 ./freertos/tasks.o
                                        0xbb9f (size before relaxing)
- .debug_str     0x000000000003e914      0x4c6 ./freertos/timers.o
+ .debug_str     0x000000000003e8e0      0x4c6 ./freertos/timers.o
                                        0xb45e (size before relaxing)
- .debug_str     0x000000000003edda     0x15a2 ./drivers/fsl_clock.o
+ .debug_str     0x000000000003eda6     0x15a2 ./drivers/fsl_clock.o
                                       0x348df (size before relaxing)
- .debug_str     0x000000000004037c      0x2d6 ./drivers/fsl_common.o
+ .debug_str     0x0000000000040348      0x2d6 ./drivers/fsl_common.o
                                       0x340fc (size before relaxing)
- .debug_str     0x0000000000040652      0x7e5 ./drivers/fsl_dma.o
+ .debug_str     0x000000000004061e      0x7e5 ./drivers/fsl_dma.o
                                       0x33ba2 (size before relaxing)
- .debug_str     0x0000000000040e37      0xad0 ./drivers/fsl_i2c.o
+ .debug_str     0x0000000000040e03      0xad0 ./drivers/fsl_i2c.o
                                       0x340b9 (size before relaxing)
- .debug_str     0x0000000000041907      0x926 ./drivers/fsl_lpsci.o
+ .debug_str     0x00000000000418d3      0x926 ./drivers/fsl_lpsci.o
                                       0x33ee7 (size before relaxing)
- .debug_str     0x000000000004222d      0x832 ./drivers/fsl_uart.o
+ .debug_str     0x00000000000421f9      0x832 ./drivers/fsl_uart.o
                                       0x33f0a (size before relaxing)
- .debug_str     0x0000000000042a5f       0x4c ./board/board.o
+ .debug_str     0x0000000000042a2b       0x4c ./board/board.o
                                       0x34c5a (size before relaxing)
- .debug_str     0x0000000000042aab      0x300 ./board/clock_config.o
+ .debug_str     0x0000000000042a77      0x300 ./board/clock_config.o
                                       0x337ef (size before relaxing)
- .debug_str     0x0000000000042dab       0x31 ./board/peripherals.o
+ .debug_str     0x0000000000042d77       0x31 ./board/peripherals.o
                                        0x2d24 (size before relaxing)
- .debug_str     0x0000000000042ddc      0x1a6 ./board/pin_mux.o
+ .debug_str     0x0000000000042da8      0x1a6 ./board/pin_mux.o
                                       0x3318d (size before relaxing)
- .debug_str     0x0000000000042f82       0x4f ./CMSIS/system_MKL25Z4.o
+ .debug_str     0x0000000000042f4e       0x4f ./CMSIS/system_MKL25Z4.o
                                       0x2f3b4 (size before relaxing)
 
 .comment        0x0000000000000000       0xb0

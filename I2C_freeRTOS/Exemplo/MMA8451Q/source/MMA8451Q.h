@@ -5,8 +5,8 @@
  *      Author: robertcabral
  */
 
-#ifndef ACCELEROMETER_H_
-#define ACCELEROMETER_H_
+#ifndef MMA8451Q_H_
+#define MMA8451Q_H_
 
 #include <I2C.h>
 
@@ -78,9 +78,9 @@ typedef enum mma8451q_power_t
 	MMA8451Q_POWER_LOW_POWER			= 0x3
 } mma8451q_power_t;
 
-class Accelerometer {
+class MMA8451Q {
 public:
-	Accelerometer(mma8451q_frequency_t freq = MMA8451Q_FREQUENCY_1_56Hz, mma8451q_range_t range = MMA8451Q_RANGE_2G, mma8451q_power_t power = MMA8451Q_POWER_HIGH_RESOLUTION);
+	MMA8451Q(mma8451q_frequency_t freq = MMA8451Q_FREQUENCY_1_56Hz, mma8451q_range_t range = MMA8451Q_RANGE_2G, mma8451q_power_t power = MMA8451Q_POWER_HIGH_RESOLUTION);
 	void setFilter();
 	uint16_t getX();
 	uint16_t getY();
@@ -94,4 +94,4 @@ private:
 	mma8451q_power_t power;
 };
 
-#endif /* ACCELEROMETER_H_ */
+#endif /* MMA8451Q_H_ */

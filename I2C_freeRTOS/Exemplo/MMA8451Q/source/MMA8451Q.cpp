@@ -8,8 +8,8 @@
 #include <fsl_i2c_freertos.h>
 #include <GPIO.h>
 #include <I2C.h>
+#include <MMA8451Q.h>
 #include <task.h>
-#include <Accelerometer.h>
 
 
 xTaskHandle task1_handle = NULL;
@@ -18,7 +18,7 @@ xTaskHandle task3_handle = NULL;
 
 
 void readX(void *parameters){
-	Accelerometer mma8541q;
+	MMA8451Q mma8541q;
 	uint16_t x = 0;
 	GPIO ledRed(GPIOB, 18U);
 	ledRed.setDirection(OUTPUT);
@@ -39,7 +39,7 @@ void readX(void *parameters){
 }
 
 void readY(void *parameters){
-	Accelerometer mma8541q;
+	MMA8451Q mma8541q;
 	uint16_t y = 0;
 	GPIO ledGreen(GPIOB, 19U);
 	ledGreen.setDirection(OUTPUT);
@@ -60,7 +60,7 @@ void readY(void *parameters){
 }
 
 void readZ(void *parameters){
-	Accelerometer mma8541q;
+	MMA8451Q mma8541q;
 	uint16_t z = 0;
 	GPIO ledBlue(GPIOD, 1U);
 	ledBlue.setDirection(OUTPUT);

@@ -13,8 +13,8 @@ source/MMA8451Q.o source/MMA8451Q.d: ../source/MMA8451Q.cpp \
  ../freertos/deprecated_definitions.h ../freertos/portmacro.h \
  ../freertos/mpu_wrappers.h ../freertos/portable.h ../freertos/semphr.h \
  ../freertos/queue.h ../drivers/fsl_i2c.h ../source/GPIO.h \
- ../source/I2C.h ../freertos/task.h ../freertos/list.h \
- ../source/Accelerometer.h
+ ../source/I2C.h ../source/MMA8451Q.h ../freertos/task.h \
+ ../freertos/list.h
 
 ../board/board.h:
 
@@ -86,8 +86,8 @@ source/MMA8451Q.o source/MMA8451Q.d: ../source/MMA8451Q.cpp \
 
 ../source/I2C.h:
 
+../source/MMA8451Q.h:
+
 ../freertos/task.h:
 
 ../freertos/list.h:
-
-../source/Accelerometer.h:

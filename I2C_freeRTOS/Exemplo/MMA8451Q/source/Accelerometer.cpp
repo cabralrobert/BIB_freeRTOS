@@ -5,12 +5,12 @@
  *      Author: robertcabral
  */
 
-#include <Accelerometer.h>
 #include <I2C.h>
 #include <MKL25Z4.h>
 #include <GPIO.h>
+#include <MMA8451Q.h>
 
-Accelerometer::Accelerometer(mma8451q_frequency_t freq, mma8451q_range_t range, mma8451q_power_t power) : i2c(I2C0, MMA8451_I2C_ADDRESS) {
+MMA8451Q::MMA8451Q(mma8451q_frequency_t freq, mma8451q_range_t range, mma8451q_power_t power) : i2c(I2C0, MMA8451_I2C_ADDRESS) {
 
 	// INITIALIZING VARIABLES
 	this->freq = freq;
@@ -28,25 +28,25 @@ Accelerometer::Accelerometer(mma8451q_frequency_t freq, mma8451q_range_t range, 
 
 }
 
-void Accelerometer::setFilter(){
+void MMA8451Q::setFilter(){
 	uint8_t aux = this->i2c.readRegister(XYZ_DATA_CFG_REG);
 	aux |= XYZ_DATA_CFG_HPF_OUT_MASK;
 	this->i2c.writeRegister(XYZ_DATA_CFG_REG, aux);
 }
 
-uint16_t Accelerometer::getX(){
+uint16_t MMA8451Q::getX(){
 	return (this->i2c.readRegister(OUT_X_MSB) << 8) | (this->i2c.readRegister(OUT_X_LSB) >> 2);
 }
 
-uint16_t Accelerometer::getY(){
+uint16_t MMA8451Q::getY(){
 	return (this->i2c.readRegister(OUT_Y_MSB) << 8) | (this->i2c.readRegister(OUT_Y_LSB) >> 2);
 }
 
-uint16_t Accelerometer::getZ(){
+uint16_t MMA8451Q::getZ(){
 	return (this->i2c.readRegister(OUT_Z_MSB) << 8) | (this->i2c.readRegister(OUT_Z_LSB) >> 2);
 }
 
-void Accelerometer::calibrate(){
+void MMA8451Q::calibrate(){
 
 	uint16_t x_offset = (this->getX() / (8 *(-1)));
 	uint16_t y_offset = (this->getY() / (8 *(-1)));
